@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-epilogue: 'Epilogue', sans-serif;
+    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Light Theme - Rose Quartz Editorial */
+    --color-bg: #fff5f7;
+    --color-surface: #ffffff;
+    --color-surface-container: #fdf2f8;
+    --color-surface-subtle: #fff9fa;
+    --color-text-main: #1f1218;
+    --color-text-muted: #6b4355;
+    --color-primary: #f472b6;
+    --color-primary-dark: #e11d48;
+    --color-secondary: #db2777;
+    --color-border: #fbcfe8;
+    --color-border-subtle: #fce7f3;
+  }
+
+  .dark {
+    /* Dark Theme - Midnight Plum & Neon Rose */
+    --color-bg: #150d14;
+    --color-surface: #1e121d;
+    --color-surface-container: #281726;
+    --color-surface-subtle: #1a1019;
+    --color-text-main: #fdf2f8;
+    --color-text-muted: #dcaec7;
+    --color-primary: #f472b6;
+    --color-primary-dark: #fb7185;
+    --color-secondary: #ec4899;
+    --color-border: #43243a;
+    --color-border-subtle: #331a2c;
+  }
+
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: var(--font-jakarta);
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+  }
+
+  body {
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .pb-safe {
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 16px);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-epilogue);
+  }
+
+  code, pre, .font-code {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Typography Helpers matching the design spec */
+.font-display-hero {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.font-display-hero-mobile {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 34px;
+  line-height: 42px;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+.font-headline-lg {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.font-headline-lg-mobile {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+.font-headline-md {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+.font-headline-sm {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+
+.font-body-sm {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  font-weight: 400;
+}
+
+.font-label-md {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+.font-label-sm {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+.font-code-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+/* Material Symbols Outlined settings */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbars for slick mobile app feel */
+::-webkit-scrollbar {
+  display: none;
+}
+
